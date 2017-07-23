@@ -7,16 +7,6 @@ import { linkTo } from '@storybook/addon-links';
 import MyButton from './MyButton.vue';
 import Welcome from './Welcome.vue';
 
-storiesOf('Charts', module).add('bar', () => ({
-  template: `
-    <div id="bar">
-      <canvas id="mycanvas" count="3"></canvas>
-      <chartjs-bar target="mycanvas"></chartjs-bar>
-    </div>
-  `
-}));
-
-
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
   template: '<welcome :showApp="action" />',
@@ -34,3 +24,12 @@ storiesOf('Button', module)
     template: '<my-button @click="action">😀 😎 👍 💯</my-button>',
     methods: { action: action('clicked') },
   }));
+
+storiesOf('Charts', module)
+  .add('bar', () => ({ template: '<chartjs-bar />' }))
+  .add('doughnut', () => ({ template: '<chartjs-doughnut />' }))
+  .add('horizontal-bar', () => ({ template: '<chartjs-horizontal-bar />' }))
+  .add('line', () => ({ template: '<chartjs-line />' }))
+  .add('pie', () => ({ template: '<chartjs-pie />' }))
+  .add('polar-area', () => ({ template: '<chartjs-polar-area />' }))
+  .add('radar', () => ({ template: '<chartjs-radar />' }));
