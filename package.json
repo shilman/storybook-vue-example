@@ -4,19 +4,23 @@
   "description": "Base on Vue2.0 wrapper for ChartJs.",
   "main": "dist/vue-charts.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hchstera/vue-charts.git"
   },
-  "dependencies":{
-    "vue": "^2.0.1",
-    "chart.js" : "^2.3.0"
+  "dependencies": {
+    "chart.js": "^2.3.0",
+    "vue": "^2.0.1"
   },
   "devDependencies": {
+    "@storybook/cli": "alpha",
     "vue-loader": "^9.7.0",
-    "webpack": "^2.1.0-beta.25"
+    "webpack": "^2.1.0-beta.25",
+    "@storybook/vue": "^3.2.0-alpha.7"
   },
   "keywords": [
     "vue",
