@@ -7,8 +7,10 @@ import { linkTo } from '@storybook/addon-links';
 import MyButton from './MyButton.vue';
 import Welcome from './Welcome.vue';
 
+import Vue from 'vue';
 import '../vue-charts'
-import Bar from '../components/chartjs-bar.vue';
+Vue.use(VueCharts);
+
 // chartjs-doughnut.vue
 // chartjs-horizontal-bar.vue
 // chartjs-line.vue
@@ -16,11 +18,15 @@ import Bar from '../components/chartjs-bar.vue';
 // chartjs-polar-area.vue
 // chartjs-radar.vue
 
-// storiesOf('Welcome', module).add('to Storybook', () => ({
-//   components: { Welcome },
-// <div id="app">
-//     <canvas id="mycanvas" count="3"></canvas>
-//     <chartjs-bar target="mycanvas"></chartjs-bar>
+storiesOf('Charts', module).add('bar', () => ({
+  template: `
+    <div id="bar">
+      <canvas id="mycanvas" count="3"></canvas>
+      <chartjs-bar target="mycanvas"></chartjs-bar>
+    </div>
+  `
+}));
+
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },

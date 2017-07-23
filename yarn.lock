@@ -92,9 +92,9 @@
     react-treebeard "^2.0.3"
     redux "^3.6.0"
 
-"@storybook/vue@^3.2.0-alpha.7":
-  version "3.2.0-alpha.8"
-  resolved "https://registry.yarnpkg.com/@storybook/vue/-/vue-3.2.0-alpha.8.tgz#a1fa87ec3af9bbbc3c994eaa0e44740492a7fcc5"
+"@storybook/vue@^3.2.0-alpha.9":
+  version "3.2.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/vue/-/vue-3.2.0-alpha.9.tgz#f38a8e24e25f3b30b4c2dddb448e39f4fe4ab368"
   dependencies:
     "@storybook/addon-actions" "^3.2.0-alpha.8"
     "@storybook/addon-links" "^3.2.0-alpha.8"
