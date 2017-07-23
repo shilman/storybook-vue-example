@@ -7,17 +7,6 @@ import { linkTo } from '@storybook/addon-links';
 import MyButton from './MyButton.vue';
 import Welcome from './Welcome.vue';
 
-import Vue from 'vue';
-import '../vue-charts'
-Vue.use(VueCharts);
-
-// chartjs-doughnut.vue
-// chartjs-horizontal-bar.vue
-// chartjs-line.vue
-// chartjs-pie.vue
-// chartjs-polar-area.vue
-// chartjs-radar.vue
-
 storiesOf('Charts', module).add('bar', () => ({
   template: `
     <div id="bar">
