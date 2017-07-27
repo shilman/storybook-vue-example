@@ -28,12 +28,12 @@ storiesOf('Button', module)
   .add('with text', () => ({
     components: { MyButton },
     template: '<my-button :handle-click="log">Hello Button</my-button>',
-    methods: { log: action('clicked 1') },
+    methods: { log: action('clicked text button') },
   }))
-  .add('with some emoji', () => ({
+  .add('with emoji', () => ({
     components: { MyButton },
     template: '<my-button :handle-click="log">😀 😎 👍 💯</my-button>',
-    methods: { log: action('clicked 2') },
+    methods: { log: action('clicked emoji button') },
   }));
 
 storiesOf('Charts', module)
@@ -46,13 +46,6 @@ storiesOf('Charts', module)
   .add('radar', () => ({ template: '<chartjs-radar />' }));
 
 storiesOf('Addon Notes', module)
-  .add(
-    'Simple note',
-    withNotes({ notes: 'My notes on some bold text' })(() => ({
-      template:
-        '<p><strong>Etiam vulputate elit eu venenatis eleifend. Duis nec lectus augue. Morbi egestas diam sed vulputate mollis. Fusce egestas pretium vehicula. Integer sed neque diam. Donec consectetur velit vitae enim varius, ut placerat arcu imperdiet. Praesent sed faucibus arcu. Nullam sit amet nibh a enim eleifend rhoncus. Donec pretium elementum leo at fermentum. Nulla sollicitudin, mauris quis semper tempus, sem metus tristique diam, efficitur pulvinar mi urna id urna.</strong></p>',
-    }))
-  )
   .add(
     'Note with HTML',
     withNotes({
@@ -70,15 +63,23 @@ storiesOf('Addon Notes', module)
 
 storiesOf('Addon Knobs', module)
   .addDecorator(withKnobs)
-  .add('Simple', () => {
+  .add('Simple', withNotes({
+      notes: `
+      <h2>My story has notes AND knobs !</h2>
+      <p>
+        <em>Document your component here..</em>
+      </p>
+    `.replace(/\n/g, ''),
+    })(() => {
     const name = text('Name', 'John Doe');
     const age = number('Age', 44);
     const content = `I am ${name} and I'm ${age} years old.`;
+    const style = text('style', 'text-align:center; line-height: 100vh');
 
     return {
-      template: `<div>${content}</div>`,
+      template: `<h2 style="${style}">${content}</h2>`,
     };
-  })
+  }))
   .add('All knobs', () => {
     const name = text('Name', 'Jane');
     const stock = number('Stock', 20, { range: true,
