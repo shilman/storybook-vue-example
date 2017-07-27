@@ -1,7 +1,7 @@
 import { configure } from '@storybook/vue'
 
 import Vue from 'vue';
-import '../../vue-charts';
+import '../src/vue-charts';
 Vue.use(VueCharts);
 
 function loadStories() {

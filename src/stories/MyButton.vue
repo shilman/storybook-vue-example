@@ -1,28 +1,31 @@
 <template>
-  <button class="button-styles" @click="onClick">
-    <slot></slot>
-  </button>
+  <button class="button" :style="{color: color, borderColor: color}" @click="handleClick" :class="{rounded: rounded}"><slot></slot>!</button>
 </template>
 
 <script>
   export default {
-    name: 'my-button',
-  
-    methods: {
-      onClick () {
+    props: {
+      rounded: Boolean,
+      handleClick: {
+        default: () => () => null
+      },
+      color: {
+        default: '#42b983'
       }
     }
   }
 </script>
 
 <style>
-  .button-styles {
-    border: 1px solid #eee;
-    border-radiuas: 3px;
-    background-color: #FFFFFF;
-    cursor: pointer;
-    font-size: 15pt;
-    padding: 3px 10px;
-    margin: 10px;
+  .rounded {
+    border-radius: 5px;
   }
+
+  .button {
+    border: 3px solid;
+    padding: 10px 20px;
+    background-color: white;
+    outline: none;
+  }
+  
 </style>
