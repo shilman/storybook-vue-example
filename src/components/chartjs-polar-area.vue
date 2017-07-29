@@ -1,6 +1,6 @@
 <template>
     <div>
-        <canvas v-if="!target" ref="canvas" :width="width" :height="height">
+        <canvas v-if="!target" ref="canvas" :width="width" :height="height"/>
     </div>
 </template>
 <script>
