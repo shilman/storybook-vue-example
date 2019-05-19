@@ -1,43 +1,46 @@
 {
-  "name": "storybook-vue-example",
-  "private": true,
-  "version": "1.0.0",
-  "description": "A demo of storybook for vue",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ndelangen/storybook-vue-example.git"
-  },
-  "dependencies": {
-    "chart.js": "^2.3.0",
-    "vue": "^2.4.1"
-  },
-  "devDependencies": {
-    "@storybook/cli": "alpha",
-    "@storybook/vue": "alpha",
-    "@storybook/addon-actions": "alpha",
-    "@storybook/addon-knobs": "alpha",
-    "@storybook/addon-links": "alpha",
-    "@storybook/addon-notes": "alpha",
-    "vue-loader": "^12.2.1",
-    "webpack": "^2.5.1"
-  },
-  "keywords": [
-    "vue",
-    "vuejs",
-    "chart",
-    "chart.js",
-    "chartjs",
-    "laravel"
-  ],
-  "author": "ndelangen",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ndelangen/storybook-vue-example/issues"
-  },
-  "homepage": "https://github.com/ndelangen/storybook-vue-example#readme"
+	"name": "storybook-vue-example",
+	"private": true,
+	"version": "1.0.0",
+	"description": "A demo of storybook for vue",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ndelangen/storybook-vue-example.git"
+	},
+	"dependencies": {
+		"chart.js": "^2.8.0",
+		"vue": "^2.6.10"
+	},
+	"devDependencies": {
+		"@storybook/addon-actions": "5.0.11",
+		"@storybook/addon-knobs": "5.0.11",
+		"@storybook/addon-links": "5.0.11",
+		"@storybook/addon-notes": "5.0.11",
+		"@storybook/cli": "5.0.11",
+		"@storybook/vue": "5.0.11",
+		"babel-loader": "^8.0.6",
+		"babel-preset-vue": "^2.0.2",
+		"vue-loader": "^15.7.0",
+		"vue-template-compiler": "^2.6.10",
+		"webpack": "^4.31.0"
+	},
+	"keywords": [
+		"vue",
+		"vuejs",
+		"chart",
+		"chart.js",
+		"chartjs",
+		"laravel"
+	],
+	"author": "ndelangen",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ndelangen/storybook-vue-example/issues"
+	},
+	"homepage": "https://github.com/ndelangen/storybook-vue-example#readme"
 }
